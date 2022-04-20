@@ -2,8 +2,10 @@
 import {useRouter} from 'next/router';
 import styled from 'styled-components';
 
+import Tile from '../comps/tile';
 
-// Styled Components
+
+// Styled components
 let Container = styled.div`
   width: 60%;
   height: 100vh;
@@ -22,6 +24,6 @@ export default function Index(){
   // Content
   return <Container>
     <h1>Select an animal.</h1>
-
+    <Tile></Tile>
   </Container>
 }
