@@ -2,7 +2,7 @@ import Image from "next/image";
 import {useRouter} from "next/router";
 import styled from "styled-components";
 
-import {animals} from '../data/selections';
+import {animals, chickens} from '../data/selections';
 
 
 // Styled components
@@ -38,7 +38,12 @@ export default function Tile(){
   // information from an array in /data/selections.js
   if (router.asPath === '/'){
     return <div>
-      <Container>
+      <Container onClick={() => router.push({
+        pathname: '/variations',
+        query:{
+          type: (animals[0].route)
+        }
+      })}>
         <div>
           <h3>{animals[0].title}</h3>
           <Image src={animals[0].img} width='80%' height='100%' />
@@ -57,6 +62,31 @@ export default function Tile(){
         </div>
       </Container>
     </div>
+  }
+
+  // If user selects chicken, show chicken variants
+  else if (router.asPath === '/variations?type=ch'){
+    return <div>
+    <Container>
+        <div>
+          <h3>{chickens[0].title}</h3>
+          <Image src={chickens[0].img} width='80%' height='100%' />
+        </div>
+      </Container>
+      <Container>
+        <div>
+          <h3>{chickens[1].title}</h3>
+          <Image src={chickens[1].img} width='80%' height='100%' />
+        </div>
+      </Container>
+      <Container>
+        <div>
+          <h3>{chickens[2].title}</h3>
+          <Image src={chickens[2].img} width='80%' height='100%' />
+        </div>
+      </Container>
+    </div>
+    
   }
   
   return <Container>
