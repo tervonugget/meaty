@@ -7,13 +7,20 @@ import {animals} from '../data/selections';
 
 // Styled components
 let Container = styled.div`
-  width: 80%;
+  width: 60%;
 
-  margin-left: 10%;
-  margin-bottom: 1rem;
+  margin-left: 20%;
+  margin-bottom: 2rem;
 
-  border: 2px blue solid;
   text-align: center;
+
+  div {
+    border: 2px blue solid;
+  }
+
+  div:hover {
+    background-color: red;
+  }
 `;
 
 
@@ -26,14 +33,22 @@ export default function Tile(){
   if (router.asPath === '/'){
     return <div>
       <Container>
-        <h3>Chicken</h3>
-        <p>{animals[0].title}</p>
+        <div>
+          <h3>{animals[0].title}</h3>
+          <Image src={animals[0].img} width='80%' height='100%' />
+        </div>
       </Container>
       <Container>
-        <h3>Cow</h3>
+        <div>
+          <h3>{animals[1].title}</h3>
+          <Image src={animals[1].img} width='100%' height='100%' />
+        </div>
       </Container>
       <Container>
-        <h3>Pig</h3>
+        <div>
+          <h3>{animals[2].title}</h3>
+          <Image src={animals[2].img} width='100%' height='80%' />
+        </div>
       </Container>
     </div>
   }

@@ -7,10 +7,10 @@ import Tile from '../comps/tile';
 
 // Styled components
 let Container = styled.div`
-  width: 60%;
+  width: 70%;
   height: 100vh;
 
-  margin-left: 20%;
+  margin-left: 15%;
 
   border: 2px red solid;
 `;
