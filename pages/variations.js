@@ -23,8 +23,28 @@ export default function Index() {
   let router = useRouter();
 
   // Content
+  if (router.asPath === '/variations?type=ch'){
   return <Container>
     <h1>Select a chicken.</h1>
     <Tile></Tile>
+  </Container>
+  }
+
+  else if (router.asPath === '/variations?type=co'){
+    return <Container>
+      <h1>Select a cow.</h1>
+      <Tile></Tile>
+    </Container>
+  }
+  
+  else if (router.asPath === '/variations?type=pi'){
+    return <Container>
+      <h1>Select a pig.</h1>
+      <Tile></Tile>
+    </Container>
+  }
+
+  else return <Container>
+    <h1>Uh-oh!</h1>
   </Container>
 }

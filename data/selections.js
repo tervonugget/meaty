@@ -35,3 +35,42 @@ export const chickens = [
     title: 'Chicken 3'
   }
 ]
+
+// Cow variations
+export const cows = [
+  {
+    img: '/../public/selections/cowFace.png',
+    route: 'co',
+    title: 'Cow 1'
+  },
+  {
+    img: '/../public/selections/cowFace2.png',
+    route: 'co',
+    title: 'Cow 2'
+  },
+  {
+    img: '/../public/selections/cowFace3.png',
+    route: 'co',
+    title: 'Cow 3'
+  }
+]
+
+// Cow variations
+export const pigs = [
+  {
+    img: '/../public/selections/pigFace.png',
+    route: 'pi',
+    title: 'Pig 1'
+  },
+  {
+    img: '/../public/selections/pigFace2.png',
+    route: 'pi',
+    title: 'Pig 2'
+  },
+  {
+    img: '/../public/selections/pigFace3.png',
+    route: 'pi',
+    title: 'Pig 3'
+  }
+]
+

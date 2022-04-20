@@ -2,7 +2,7 @@ import Image from "next/image";
 import {useRouter} from "next/router";
 import styled from "styled-components";
 
-import {animals, chickens} from '../data/selections';
+import {animals, chickens, cows, pigs} from '../data/selections';
 
 
 // Styled components
@@ -34,6 +34,7 @@ export default function Tile(){
   // Defining variables
   let router = useRouter();
   
+  // SELECT AN ANIMAL
   // Check the router's current path and display the corresponsding
   // information from an array in /data/selections.js
   if (router.asPath === '/'){
@@ -49,13 +50,23 @@ export default function Tile(){
           <Image src={animals[0].img} width='80%' height='100%' />
         </div>
       </Container>
-      <Container>
+      <Container onClick={() => router.push({
+        pathname: '/variations',
+        query: {
+          type: (animals[1].route)
+        }
+      })}>
         <div>
           <h3>{animals[1].title}</h3>
           <Image src={animals[1].img} width='100%' height='100%' />
         </div>
       </Container>
-      <Container>
+      <Container onClick={() => router.push({
+        pathname: '/variations',
+        query: {
+          type: (animals[2].route)
+        }
+      })}>
         <div>
           <h3>{animals[2].title}</h3>
           <Image src={animals[2].img} width='100%' height='80%' />
@@ -64,6 +75,7 @@ export default function Tile(){
     </div>
   }
 
+  // SELECT A CHICKEN
   // If user selects chicken, show chicken variants
   else if (router.asPath === '/variations?type=ch'){
     return <div>
@@ -86,8 +98,58 @@ export default function Tile(){
         </div>
       </Container>
     </div>
-    
   }
+
+  // SELECT A COW
+  // If user selects cow, show cow variations
+  else if (router.asPath === '/variations?type=co') {
+    return <div>
+      <Container>
+        <div>
+          <h3>{cows[0].title}</h3>
+          <Image src={cows[0].img} width='100%' height='100%' />
+        </div>
+      </Container>
+      <Container>
+        <div>
+          <h3>{cows[1].title}</h3>
+          <Image src={cows[1].img} width='100%' height='100%' />
+        </div>
+      </Container>
+      <Container>
+        <div>
+          <h3>{cows[2].title}</h3>
+          <Image src={cows[2].img} width='100%' height='100%' />
+        </div>
+      </Container>
+    </div>
+  }
+  
+  // SELECT A PIG
+  // If user selects pig, show pig variations
+  else if (router.asPath === '/variations?type=pi') {
+    return <div>
+      <Container>
+        <div>
+          <h3>{pigs[0].title}</h3>
+          <Image src={pigs[0].img} width='100%' height='80%' />
+        </div>
+      </Container>
+      <Container>
+        <div>
+          <h3>{pigs[1].title}</h3>
+          <Image src={pigs[1].img} width='100%' height='80%' />
+        </div>
+      </Container>
+      <Container>
+        <div>
+          <h3>{pigs[2].title}</h3>
+          <Image src={pigs[2].img} width='100%' height='80%' />
+        </div>
+      </Container>
+    </div>
+  }
+
   
   return <Container>
     <h3>Uh oh!</h3>

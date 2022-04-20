@@ -23,7 +23,7 @@ export default function Index(){
   // Defining variables
   let router = useRouter();
 
-  // Content
+  // Content)
   return <Container>
     <h1>Select an animal.</h1>
     <Tile></Tile>
