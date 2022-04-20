@@ -15,11 +15,17 @@ let Container = styled.div`
   text-align: center;
 
   div {
-    border: 2px blue solid;
+    border: 5px black solid;
+    border-radius: 20px;
+    box-shadow: 4px 2px #111111;
   }
 
   div:hover {
-    background-color: red;
+    background-color: rgba(256, 0, 0, 0.3);
+    border: 5px red solid;
+    box-shadow: 4px 2px red;
+    color: white;
+    cursor: pointer;
   }
 `;
 

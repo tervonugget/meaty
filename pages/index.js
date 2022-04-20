@@ -8,9 +8,11 @@ import Tile from '../comps/tile';
 // Styled components
 let Container = styled.div`
   width: 70%;
+  max-width: 500px;
   height: 100vh;
 
-  margin-left: 15%;
+  margin-left: auto;
+  margin-right: auto;
 
   border: 2px red solid;
 `;
