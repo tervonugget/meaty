@@ -24,7 +24,11 @@ export default function Index() {
   let router = useRouter();
 
   // Content
-  if (router.asPath === '/variations?type=ch'){
+  if (router.asPath === undefined){
+    return null
+  }
+
+  else if (router.asPath === '/variations?type=ch'){
   return <Container>
     <h2>Select a chicken.</h2>
     <Tile></Tile>

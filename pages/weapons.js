@@ -25,7 +25,11 @@ export default function Index() {
 
   // Content
   // If the selection is chicken > chicken 1, chicken 2, or chicken 3...
-  if (router.asPath === '/weapons?type=chch'){
+  if (router.asPath === undefined) {
+    return null
+  }
+
+  else if (router.asPath === '/weapons?type=chch'){
     return <Container>
       <h2>Chicken 1 Weapons</h2>
       <Tile></Tile>

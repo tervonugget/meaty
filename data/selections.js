@@ -112,3 +112,10 @@ export const weaponsCoPi = [
   }
 ]
 
+// CHICKEN PATH
+export const chickenPath = [
+  {
+    img: '/../public/chickens/chickenDangle.png',
+  }
+]
+

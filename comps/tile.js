@@ -38,7 +38,11 @@ export default function Tile(){
   // SELECT AN ANIMAL
   // Check the router's current path and display the corresponsding
   // information from an array in /data/selections.js
-  if (router.asPath === '/'){
+  if (router.asPath === undefined) {
+    return null
+  }
+  
+  else if (router.asPath === '/'){
     return <div>
       <Container onClick={() => router.push({
         pathname: '/variations',
@@ -200,7 +204,12 @@ export default function Tile(){
   // Show the weapons for the chicken path
   else if (router.asPath === '/weapons?type=chch'){
     return <div>
-      <Container>
+      <Container onClick={() => router.push({
+        pathname: 'chickens',
+        query:{
+          type: (chickens[0].route) + (weaponsCh[0].route) + Number(0)
+        }
+      })}>
         <div>
           <h3>{weaponsCh[0].title}</h3>
           <Image src={weaponsCh[0].img} width='100%' height='100%' />
