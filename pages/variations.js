@@ -1,3 +1,4 @@
+// This is the second selection screen.
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
@@ -25,26 +26,26 @@ export default function Index() {
   // Content
   if (router.asPath === '/variations?type=ch'){
   return <Container>
-    <h1>Select a chicken.</h1>
+    <h2>Select a chicken.</h2>
     <Tile></Tile>
   </Container>
   }
 
   else if (router.asPath === '/variations?type=co'){
     return <Container>
-      <h1>Select a cow.</h1>
+      <h2>Select a cow.</h2>
       <Tile></Tile>
     </Container>
   }
   
   else if (router.asPath === '/variations?type=pi'){
     return <Container>
-      <h1>Select a pig.</h1>
+      <h2>Select a pig.</h2>
       <Tile></Tile>
     </Container>
   }
 
   else return <Container>
-    <h1>Uh-oh!</h1>
+    <h2>Uh-oh!</h2>
   </Container>
 }

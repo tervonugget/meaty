@@ -40,22 +40,22 @@ export const chickens = [
 export const cows = [
   {
     img: '/../public/selections/cowFace.png',
-    route: 'co',
+    route: 'cow',
     title: 'Cow 1'
   },
   {
     img: '/../public/selections/cowFace2.png',
-    route: 'co',
+    route: 'cow2',
     title: 'Cow 2'
   },
   {
     img: '/../public/selections/cowFace3.png',
-    route: 'co',
+    route: 'cow3',
     title: 'Cow 3'
   }
 ]
 
-// Cow variations
+// Pig variations
 export const pigs = [
   {
     img: '/../public/selections/pigFace.png',
@@ -64,13 +64,51 @@ export const pigs = [
   },
   {
     img: '/../public/selections/pigFace2.png',
-    route: 'pi',
+    route: 'pi2',
     title: 'Pig 2'
   },
   {
     img: '/../public/selections/pigFace3.png',
-    route: 'pi',
+    route: 'pi3',
     title: 'Pig 3'
+  }
+]
+
+// Weapons for chickens
+export const weaponsCh = [
+  {
+    img: '/../public/selections/bath.png',
+    route: 'ba',
+    title: 'Bath'
+  },
+  {
+    img: '/../public/selections/co2.png',
+    route: 'co2',
+    title: 'CO2'
+  },
+  {
+    img: '/../public/selections/tongs.png',
+    route: 'to',
+    title: 'Tongs'
+  },
+]
+
+// Weapons for cows and pigs
+export const weaponsCoPi = [
+  {
+    img: '/../public/selections/co2.png',
+    route: 'co2',
+    title: 'CO2'
+  },
+  {
+    img: '/../public/selections/gun.png',
+    route: 'gu',
+    title: 'Gun'
+  },
+  {
+    img: '/../public/selections/tongs.png',
+    route: 'to',
+    title: 'Tongs'
   }
 ]
 

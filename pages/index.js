@@ -25,7 +25,7 @@ export default function Index(){
 
   // Content)
   return <Container>
-    <h1>Select an animal.</h1>
+    <h2>Select an animal.</h2>
     <Tile></Tile>
   </Container>
 }
